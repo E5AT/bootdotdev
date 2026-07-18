@@ -1,2 +1,2 @@
-python src/main.py
-cd public && python -m http.server 8888
+python src/main.py "/"
+cd docs && python -m http.server 8888
