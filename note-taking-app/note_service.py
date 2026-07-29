@@ -15,13 +15,21 @@ class NoteService:
     def list_notes() -> None:
         notes = JSONService.parse()
 
-        print("List of all notes:")
-        for i in range(0, len(notes)):
-            print(f"[ID: {i}] - {notes[i]}")
+        if len(notes) == 0:
+            print("No notes found.")
+        else:
+            print("List of all notes:")
+            for i in range(0, len(notes)):
+                print(f"[ID: {i}] - {notes[i]}")
 
     @staticmethod
     def delete_note(note_id: int) -> None:
         notes = JSONService.parse()
-        deleted_note = notes.pop(note_id)
-        JSONService.write(notes)
-        print(f"Deleted note: {deleted_note}")
+
+        if len(notes) <= note_id:
+            print(f"<note_id> is out of range.")
+
+        else:
+            deleted_note = notes.pop(note_id)
+            JSONService.write(notes)
+            print(f"Deleted note: {deleted_note}")
