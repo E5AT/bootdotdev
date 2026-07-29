@@ -1,6 +1,5 @@
 from note import Note
 from json_service import JSONService
-from pathlib import Path
 
 class NoteService:
 

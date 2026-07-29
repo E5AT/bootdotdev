@@ -1,7 +1,6 @@
 from note import Note
 from note_service import NoteService
 from datetime import datetime
-import os
 import sys
 
 def main():
