@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "name": "heifer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "vite build",
+    "start": "node dist/heifer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.29.7",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
